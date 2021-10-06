@@ -72,10 +72,13 @@ a.link:hover{
 }
 #container2{
     margin-top: 100px;
-    padding: auto;
-      
+    padding: auto; 
 }
 
+#container4{
+  margin-top: -90px;
+  text-align: center;
+}
 
 #titulo{
     font-size: 50px;
@@ -281,3 +284,88 @@ input.form-control:focus {
     height:128.7px;
   }
   
+  div#container3{
+    margin-top: 500px;
+  }
+
+  div.card5{
+    background-color: #444444;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  div.card6{
+    margin-top: 50px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+  }
+  div.card7{
+    background-color: gray;
+    padding: 10px;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 20px;
+  }
+
+  div.lista{
+    margin: 24%;
+    margin-top: 50px;
+    width: 15%;
+  }
+
+  ul#list-group1{
+    display: flex;
+    align-content: space-between;
+    margin: 50px;
+  }
+
+
+  li#list1{
+    background-color: #f7f7f7;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  li#list2{
+    text-align: left;
+    font-size: 15px;
+  }
+
+div.cards{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  width: 76rem;
+}
+
+div.card{
+  margin: 60px;
+  border-radius: 20px;
+}
+
+img.card-img-top{
+  height: 50%;
+  border-radius: 5px;
+}
+
+div.feliz{
+  padding: 20px;
+  background-color: teal;
+}
+
+a#sm{
+  text-decoration: none;
+  color: #ea1d2c;
+}
+
+div#container5{
+  background-color: black;
+  box-shadow: 2px 15px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+div.lista2{
+  margin-left: 25%;
+}
