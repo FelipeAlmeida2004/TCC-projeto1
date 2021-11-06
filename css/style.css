@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -159,3 +161,189 @@ input.form-control:focus {
   margin-right: 20px;
 }
 
+/*Quem Somos*/
+
+  /*Painel*/
+  .painel{
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    margin-top: 120px;
+    transition: filter 0.3s;
+  }
+
+  .painel:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 3px 0.4rem rgba(0, 0, 0, 0.856));
+  }
+
+  .hist{
+    margin-top: 150px;
+  }
+
+  .histimg{
+    border-radius: 10px;
+  }
+
+  .criadores{
+    margin-top: 100px;
+  }
+
+  .cri{
+    margin-left: 100px
+  }
+
+  .imgcri{
+    width: 200px;
+  }
+
+  .criad{
+    margin-left: 10%;
+  }
+
+  .painel2{
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .painel3{
+    margin-top: 110px;
+  }
+
+  .texto-p{
+    margin-top: 170px;
+    margin-bottom: -80px;
+  }
+
+  @media screen and (max-width: 990px){
+    .painel{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: filter 0.3s;
+    }
+
+    .painel2{
+      margin-top: -120px;
+    }
+
+    .painel3{
+      margin-top: -250px;
+    }
+
+    .texto-p{
+      margin-top: -100px;
+     margin-bottom: 100px;
+    }
+
+    .mtop{
+      margin-top: -100px;
+    }
+  }
+
+  @media screen and (max-width:575px){
+    .divisor{
+      margin: 45px;
+    }
+    .debaixo{
+      margin-bottom: 50px;
+    }
+    .painel{
+      width: 80%;
+      height: 150px;
+      border-radius: 10px;
+      margin-top: 110px;
+      transition: filter 0.3s;
+      }
+
+      .painel2{
+        margin-top: -120px;
+      }
+  
+      .painel3{
+        margin-top: -120px;
+      }
+  
+      .texto-p{
+       margin-top: 350px;
+       margin-bottom: -100px;
+      }
+  
+      .mtop{
+        margin-top: 250px;
+      }
+      .topo{
+        margin-top: 100px;
+      }
+      .marg{
+        margin-top: 400px;
+      }
+  }
+
+  /*Fale conosco*/
+
+  .fale-c{
+    width: 100%;
+    height: 200px;
+  }
+
+  .ajuda{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: white;
+  }
+
+  .text-contact{
+    color: rgb(255, 123, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+  }
+
+  .icons-fale{
+    font-size: 40px;
+  }
+
+  .list-contact{
+    margin-top: 140px;
+  }
+
+  .tel{
+    margin-left: 250px;
+  }
+
+  .chat{
+    margin-left: 200px;
+  }
+
+  /*Info food truck*/
+
+  .img-info{
+    width: 1300px;
+    height: 250px;
+  }
+  
+  .icon-info{
+    margin-left: 10px;
+    width: 50%;
+    padding: -5px;
+  }
+
+  .titulo-food{
+    margin-left: -30px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .cardapio{
+    width: 70%;
+  }
+
+  .desc{
+    padding: 0;
+  }
+
+  .foto{
+    padding: 0;
+  }
