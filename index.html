@@ -31,30 +31,37 @@
             <a class="nav-link menu" href="Categ.html">Categoria</a>
           </li>
         </ul>
-        <button class="btn1 ms-auto" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-user"></i></button>
+<!--Inicio Modal-->
+          <button class="btn1 ms-auto" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-user"></i></button>
       </div>
     </div>
   </nav>
 </div>
 
-      <div class="modal fade" style="width: 300px;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" style="width: 300px;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content" style="width: 300px;">
             <div class="modal-header gradt">
-              <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-person-circle icon"></i></h5>
-              <button style="outline: none; box-shadow: none;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="exampleModalLabel">
+                <div class="circulopessoa">
+                  <img class="logo-user" src="img/logo.ico" alt="">
+                </div>
+              </h5>
+              <p class="text-name">Nome do usuário</p>
+              <button style="outline: none; box-shadow: none; margin-top: -60px;" type="button" class="cor-button" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times" style="color: white;"></i></button>
             </div>
-            <div class="modal-body">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li><br>
-              </ul>
-            </div>
-          </div>
+          <div class="modal-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="FaleC.html">Fale Conosco</a></li><br>
+              <li class="list-group-item"><a href="#">FoodTrucks</a></li><br>
+              <li class="list-group-item"><a class="edicaolink" href="Login.html">Entre ou Cadastre-se</a></li><br>
+              <!--Colocar para Aparecer quando Logado<li class="list-group-item"><a href="PainelAdmUser.html">Perfil</a></li>
+              <li></li>-->
+            </ul>
         </div>
       </div>
-
+    </div>
+  </div>
 
    <!--Header-->
    <div class="px-5 texto1">

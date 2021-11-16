@@ -1,44 +1,26 @@
-		function menurota(){
-		const slider = document.querySelector(".items");
-		const slides = document.querySelectorAll(".item");
-		const button = document.querySelectorAll(".button");
+if('geolocation' in navigator){
+	/*navigator.geolocation.getCurrentPosition(function(position){
+		console.log(position)
+	},function(error){
+		console.log(error)
+	})*/
 
-		let current = 0;
-		let prev = 3;
-		let next = 1;
+	 var lat;
+	 var long;
 
-		for (let i = 0; i < button.length; i++) {
-			button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
-		}
+	const watcher = navigator.geolocation.watchPosition(function(position){
+		console.log(position)
+		latitude = 5;
+		lat = latitude;
 
-		const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
 
-		const gotoNext = () => current < 2 ? gotoNum(current + 1) : gotoNum(0);
-
-		const gotoNum = number => {
-			current = number;
-			prev = current - 1;
-			next = current + 1;
-
-			for (let i = 0; i < slides.length; i++) {
-				slides[i].classList.remove("active");
-				slides[i].classList.remove("prev");
-				slides[i].classList.remove("next");
-			}
-
-			if (next == 3) {
-				next = 0;
-			}
-
-			if (prev == -1) {
-				prev = 2;
-			}
-
-			slides[current].classList.add("active");
-			slides[prev].classList.add("prev");
-			slides[next].classList.add("next");
-
-		}
-	}
+	}, function(error){
+		console.log(error)
+	}, {enableHighAccuracy: true, maximumAge: 30000, timeout: 30000})
 	
-	menurota();
+}else{
+	alert('ops, não foi possivel pegar a localização')
+}
+
+alert(lat)
+

@@ -24,8 +24,7 @@
 }
 
 .gradt{
-  background: linear-gradient(
-  #F37335, #fdc630a8)
+  background-color:black;
 }
 
 .icon{
@@ -347,4 +346,39 @@ input.form-control:focus {
 
   .foto{
     padding: 0;
+  }
+
+  .circulopessoa{
+    border: 1px solid #ea1d2c;
+    width: 60px;
+    height:60px ;
+    border-radius: 100px;
+    background-image: url("img/logo.ico");
+    
+  }
+
+  .logo-user{
+    width: 40px;
+    margin-left: 8px;
+    margin-top: 10px;
+  }
+
+  .text-name{
+    color: #fff;
+    margin-left: -30px;
+    margin-top: 10px;
+  }
+
+  .cor-button{
+    background-color: transparent;
+    border: none;
+    outline: none; 
+  }
+
+  .edicaolink{
+    text-decoration: none;
+    color: black;
+  }
+  .edicaolink:hover{
+    color: #ea1d2c;
   }
