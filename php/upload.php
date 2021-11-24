@@ -1,47 +1,58 @@
 <?php
 
+session_start();
+
+
 include('conection.php');
 
+$info = array();
+$info[0] = $_POST['desc'];
+$info[1] = $_POST['nameEst'];
 
-if(isset($_FILES['arquivo'])){
-    $arquivo = $_FILES['arquivo'];
+$_SESSION['info'] = $info;
 
-    if($arquivo['error'])
-        die("Falha ao enviar arquivo!");
 
-    if($arquivo['size'] > 2097152)
-        die("Arquivo muito grande!");
+$arquivo = $_FILES['arquivo'];
+$destino = 'upload/';
+$nomeArquivo = $arquivo['tmp_name'];
+$nome = $arquivo['name'];
+$pasta =$destino.$arquivo['name'];
 
-    $pasta = 'upload/';
-    $nomeArquivo = $arquivo['name'];
-    $novoNomeArquivo = uniqid();
-    $extensao = strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
 
-    if($extensao != "jpg" && $extensao != "png" && $extensao != "jpeg")
-        die("Tipo de arquivo inválido!");
 
-    $path = $pasta . $novoNomeArquivo . "." . $extensao;
-    
-    $sucesso = move_uploaded_file($arquivo["tmp_name"], $path);
+    $sucesso = move_uploaded_file($arquivo["tmp_name"], $pasta);
         if ($sucesso) {
 
-            $sql = "INSERT INTO foodtruck (Img_food, nome_img) VALUES ('$path','$nomeArquivo')";
+            $sql = "INSERT INTO foodtruck (Img_food, nome_img) VALUES ('$pasta','$nome')";
             $stm = $pdo->prepare($sql);
             $stm->execute();
+            if(isset($_FILES['cardapio'])){
+                $cardapio = $_FILES['cardapio'];
+                $cardNome = $cardapio['tmp_name'];
+                $card = $cardapio['name'];
+                $dir = $destino.$cardapio['name'];
 
-            echo "<p>Arquivo enviado com sucesso!!</p>";
+                $_SESSION['cardapio'] = $dir;
+
+                $res = move_uploaded_file($cardapio["tmp_name"], $dir);
+                    if($res){
+                        $sql2 = "INSERT INTO cardapio (Img_card, Desc_card) VALUES ('$dir','$card')";
+                        $stm2 = $pdo->prepare($sql2);
+                        $stm2->execute();
+
+                       
+                        header("Location: ../InfoFood.php");
+                    }else{
+                        echo "ERROR";
+                    }
+            }else{
+                echo "ERROR";
+            }
         }else{
-            echo "<p>Falha ao enviar arquivo!</p>";
         }
 
 
-}
-$sql_consulta = "SELECT Img_food, nome_img FROM foodtruck";
-$stmt = $pdo->prepare($sql_consulta);
-$stmt->execute();
 
-while($arquivo = $sql_consulta->fetch_assoc()){
 
-}
 
 ?>

@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+$info = $_SESSION['info'];
+$pasta = $_SESSION['img'];
+$dir = $_SESSION['cardapio'];
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -58,36 +69,22 @@
 
 
     <div class="text-black text-center" style="margin-top: 150px;">
-        <img src="img/banner.png" class="card-img img-info" alt="...">
+        <img src="php/<?= $pasta ?>" style="width:1210px; height:250px;" alt="">
     </div>
 
     <div class="container-fluid mt-5">
         <div class="row">
-            <div class="col-xl-1">
-            <img src="img/icone.png" class="icon-info">
-            </div>
             <div class="col-xl-3">
-            <p class="display-6 titulo-food" style="font-size: 30px;">Food do felipe</p>
+            <p class="display-6 titulo-food" style="font-size: 30px; margin-left: 11%;"><?= $info[1] ?></p>
             </div>
         </div>
 
         <div class="row justify-content-around mt-5">
             <div class="col-xl-5 desc">
-               <p class="mt-3">Líder no segmento de serviço rápido de alimentação, o McDonalds se destaca pela qualidade dos produtos e do atendimento. Sempre temos uma Mc Oferta especial (promoção) de Hamburguer, lanches, sanduíche, batata e sorvete. Aproveite!</p>
-               <h5>Endereço</h5>
-
-                <p>Avenida Tancredo de Almeida Neves, 0 - Jardim Botafogo 1 <br>
-                
-                Sao Carlos - SP <br>
-                
-                CEP: 13561-260</p>
-                
-                <h5>Outras informações</h5>
-                
-                CNPJ: 42.591.651/1741-33</p>
+               <p class="mt-3"><?= $info[0] ?></p>
             </div>
             <div class="col-xl-5 foto">
-                <img class="cardapio" src="img/cardapio1.png" alt="">
+                <img class="cardapio" src="php/<?= $dir ?>" alt="">
             </div>
         </div>
     </div>
@@ -138,3 +135,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
+

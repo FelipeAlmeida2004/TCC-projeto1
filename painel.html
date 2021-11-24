@@ -74,52 +74,82 @@
   <div class="container">
       <div class="row justify-content-sm-center mt-5">
         <div class="col-xl-5 col-lg-4 col-md-5 col-sm-7 col-10">
-          <div class="card mt-3" style="width: 25rem;">
+          <div class="card mt-3" style="width: 35rem; margin-left: -50px;">
             <div class="card-body">
               <h5 class="card-title">Upload do Banner</h5>
               <p class="card-text">Aqui deve-se fazer o upload de uma imagem para ser seu banner!</p>
               <form action="php/upload.php" method="post" enctype="multipart/form-data">
                 <label>Arquivo:</label>
-                <input type="file" name="arquivo">
-                <input class="btn btn-danger mt-3" type="submit" value="Enviar">
+                <input type="file" name="arquivo"><br><br>
+
+                <div class="card-body">
+                  <h5 class="card-title" style="margin-left: -10px;">Upload do Cardapio</h5>
+                  <p class="card-text" style="margin-left: -10px;">Aqui deve-se fazer o upload de uma imagem para ser seu banner!</p>
+                  <form action="php/upload.php" method="post" enctype="multipart/form-data">
+                    <label style="margin-left: -10px;">Arquivo:</label>
+                    <input type="file" name="cardapio"><br>
+                </div><br>
+
+                <div class="card-body">
+                <h5 class="card-title" style="margin-left: -10px; margin-top: 70px;">Escrita - Descrição do estabelecimento</h5>
+                <p class="card-text" style="margin-left: -10px;">Aqui deve-se inserir uma breve descrição do seu estabelecimento!</p>
+                <button type="button" style="margin-left: -10px; margin-bottom: 20px;" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Dicas para o texto
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Como usar os tipos de texto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Coloque seu texto entre as tags(sem as aspas) <"b"> <"/b"> para a frase ou palavra ficar em <b>negrito.</b><br><br>
+                        Use a tag(sem as aspas) <"br"> para pular uma linha. <br><br>
+                        Coloque seu texto entre as tags <"h3"> <"/h3"> para dar destaque ao seu título. 
+                        </p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Ok</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-floating" style="margin-left: -10px;">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="0"></textarea>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" style="margin-left: -10px; margin-top: 70px;">Escrita - Confirmação do Nome Food Truck</h5>
+                <p class="card-text" style="margin-left: -10px;">Aqui deve-se confirmar o nome do seu estabelecimento!</p>
+                <div class="mb-3">
+                  <input type="text" style="margin-left: -10px;" class="form-control" id="exampleFormControlInput1" name="nameEst" placeholder="name">
+                </div>
+              </div>
+                <button class="btn btn-danger mt-3" type="submit" value="Enviar">Enviar</button>
               </form>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">item 1</li>
-              <li class="list-group-item">item 2</li>
-              <li class="list-group-item">item 3</li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="col-xl-5 col-lg-4 col-md-5 col-sm-7 col-10 pe-col-auto">
-          <div class="card mt-3" style="width: 25rem;">
-            <div class="card-body">
-              <h5 class="card-title">Upload da Logo</h5>
-              <p class="card-text">Aqui deve-se fazer o upload da logo do seu estabelecimento!</p>
-              <form action="php/.php" method="post" enctype="multipart/form-data">
-                <label>Arquivo:</label>
-                <input type="file"name="logo">
-                <input class = "btn btn-danger mt-3" type="submit" value="Enviar">
-              </form>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">item 1</li>
-              <li class="list-group-item">item 2</li>
-              <li class="list-group-item">item 3</li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="row justify-content-sm-center mt-5">
           <div class="col-xl-5 col-lg-4 col-md-5 col-sm-7 col-10">
-            <div class="card mt-3" style="width: 25rem;">
+            <div class="card mt-3" style="width: 35rem; margin-left: -50px;">
               <div class="card-body">
                 <h5 class="card-title">Escrita - Nome Food Truck</h5>
                 <p class="card-text">Aqui deve-se inserir o nome do seu estabelecimento!</p>
+                <div class="form-floating mb-3">
+                  <form action="upload.php" method="post">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="1"></textarea>
+                  <button class="btn btn-danger mt-3" type="submit" value="Enviar">Enviar</button>
+                  </form>
+                </div>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">item 1</li>
@@ -127,13 +157,19 @@
                 <li class="list-group-item">item 3</li>
               </ul>
             </div>
-          </div>
+          </div>-->
     
-          <div class="col-xl-5 col-lg-4 col-md-5 col-sm-7 col-10 pe-col-auto">
+          <!--<div class="col-xl-5 col-lg-4 col-md-5 col-sm-7 col-10 pe-col-auto">
             <div class="card mt-3" style="width: 25rem;">
               <div class="card-body">
                 <h5 class="card-title">Escrita - Descrição Food Truck</h5>
                 <p class="card-text">Aqui deve-se inserir uma breve descrição sobre o seu estabelecimento!</p>
+                <div class="form-floating mb-3">
+                  <form action="upload.php" method="post">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="1"></textarea>
+                  <button class="btn btn-danger mt-3" type="submit" value="Enviar">Enviar</button>
+                  </form>
+                </div>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">item 1</li>
@@ -141,7 +177,7 @@
                 <li class="list-group-item">item 3</li>
               </ul>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
 
