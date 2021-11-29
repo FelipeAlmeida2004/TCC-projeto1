@@ -66,76 +66,23 @@
 
 <!--Header-->
     <div class="px-5 texto1" style="margin-top: 30px;">
-        <h1 class="display-6 fw-bold">Painel Administrativo</h1>
+        <h1 class="display-6 fw-bold">Painel De Configurações <br> Do Usuário</h1>
     </div>
 
   <div class="container">
       <div class="row justify-content-sm-center mt-5">
         <div class="col-xl-5 col-lg-4 col-md-5 col-sm-7 col-10">
-          <div class="card mt-3" style="width: 35rem; margin-left: -50px;">
+          <div class="card mt-3" style="width: 45rem; height: 360px; margin-left: -70px;">
             <div class="card-body">
-              <h5 class="card-title">Upload do Banner</h5>
-              <p class="card-text">Aqui deve-se fazer o upload de uma imagem para ser seu banner!</p>
-              <form action="php/upload.php" method="post" enctype="multipart/form-data">
-                <label>Arquivo:</label>
-                <input type="file" name="arquivo"><br><br>
-
-                <div class="card-body">
-                  <h5 class="card-title" style="margin-left: -10px;">Upload do Cardapio</h5>
-                  <p class="card-text" style="margin-left: -10px;">Aqui deve-se fazer o upload de uma imagem para ser seu banner!</p>
-                  <form action="php/upload.php" method="post" enctype="multipart/form-data">
-                    <label style="margin-left: -10px;">Arquivo:</label>
-                    <input type="file" name="cardapio"><br>
-                </div><br>
-
-                <div class="card-body">
-                <h5 class="card-title" style="margin-left: -10px; margin-top: 30px;">Escrita - Descrição do estabelecimento</h5>
-                <p class="card-text" style="margin-left: -10px;">Aqui deve-se inserir uma breve descrição do seu estabelecimento!</p>
-                <button type="button" style="margin-left: -10px; margin-bottom: 20px;" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  Dicas para o texto
-                </button>
-                
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Como usar os tipos de texto</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <p>Coloque seu texto entre as tags(sem as aspas) <"b"> <"/b"> para a frase ou palavra ficar em <b>negrito.</b><br><br>
-                        Use a tag(sem as aspas) <"br"> para pular uma linha. <br><br>
-                        Coloque seu texto entre as tags <"h3"> <"/h3"> para dar destaque ao seu título. 
-                        </p>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Ok</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-floating" style="margin-left: -10px;">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="0"></textarea>
-                </div>
+              <h5 class="card-title">Configurações do Usuário</h5>
+              <p class="card-text">Aqui você pode realizar algumas alterações no seu cadastro!</p>
+              <div class="list-group" style="margin-top:50px;">
+                <a href="MudarEmail.html" class="list-group-item list-group-item-action mt-2">Mudar endereço de E-mail</a>
+                <a href="EsqueciSenha.html" class="list-group-item list-group-item-action mt-2">Mudar Senha</a>
+                <a href="MudarNome.html
+                " class="list-group-item list-group-item-action mt-2">Mudar nome de usuário</a>
               </div>
-              <div class="card-body">
-                <h5 class="card-title" style="margin-left: -10px; margin-top: 20px;">Escrita - Confirmação dos dados do Food Truck</h5>
-                <p class="card-text" style="margin-left: -10px;">Aqui deve-se confirmar o nome do seu estabelecimento!</p>
-                <div class="mb-3">
-                  <input type="text" style="margin-left: -10px;" class="form-control" id="exampleFormControlInput1" name="nameEst" placeholder="name"><br>
-                  <label style="margin-left: -10px; margin-bottom: 7px;">Telefone de Contato:</label>
-                  <input type="text" style="margin-left: -10px;" class="form-control" id="exampleFormControlInput1" name="telEst" placeholder="telefone"><br>
-                  <label style="margin-left: -10px; margin-bottom: 7px;">Placa do veículo:</label>
-                  <input type="text" style="margin-left: -10px;" class="form-control" id="exampleFormControlInput1" name="placaEst" placeholder="placa"><br>
-                  <label style="margin-left: -10px; margin-bottom: 7px;">Cor do Foodtruck:</label>
-                  <input type="text" style="margin-left: -10px;" class="form-control" id="exampleFormControlInput1" name="corEst" placeholder="cor"><br>
-                  <label style="margin-left: -10px; margin-bottom: 7px;">Modelo do veículo:</label>
-                  <input type="text" style="margin-left: -10px;" class="form-control" id="exampleFormControlInput1" name="modeloEst" placeholder="modelo">
-                </div>
-              </div>
-                <button class="btn btn-danger mt-3" type="submit" value="Enviar">Enviar</button>
+                <button class="btn btn-danger mt-4" type="submit" value="Enviar">Enviar</button>
               </form>
             </div>
           </div>
